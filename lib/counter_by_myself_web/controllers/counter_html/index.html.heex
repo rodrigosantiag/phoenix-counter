@@ -1,0 +1,16 @@
+<div class="space-y-5">
+  <div class="p-3 bg-white shadow rounded-lg">
+    <h3 class="text-xs border-b">Current counter</h3>
+    <p class="font-sans">
+    <div class="flex items-center space-x-2 font-sans">
+      <.link navigate={~p"/?count=#{if @count > 0, do: @count - 1, else: 0}"} class="hover:bg-blue-400 group flex items-center rounded-md bg-blue-500 text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm">
+        -
+      </.link>      
+      <span>Counter: <span class="font-bold"><%= @count %></span></span>
+      <.link navigate={~p"/?count=#{@count + 1}"} class="hover:bg-blue-400 group flex items-center rounded-md bg-blue-500 text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm">
+        +
+      </.link>   
+      </div>
+    </p>
+  </div>
+</div>
