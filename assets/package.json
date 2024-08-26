@@ -5,8 +5,9 @@
   "main": "tailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./node_modules/webpack/bin/webpack.js --mode production",
-    "start": "mix phx.server"
+    "build": "postcss assets/css/tailwind.css -o priv/static/assets/app.css",
+    "start": "mix phx.server",
+    "deploy": "npm run build && npm run start"
   },
   "keywords": [],
   "author": "",
